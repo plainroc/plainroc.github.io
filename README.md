@@ -18,4 +18,6 @@
 其他
 ===
 
-请不要直接fork本项目的master branch，如果需要作为模板使用，可以选择template分支clone或者fork。
+请不要直接fork本项目的master branch，如果需要作为模板使用，可以选择template分支clone或者fork。之后请修改以下文件中网站名称等需要定制的部分：
+* _layouts/default.html
+* atom.xml
