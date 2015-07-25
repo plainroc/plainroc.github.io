@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-echo hello
+echo this is womb downloader 
 mkdir -p seed
-curl -L -o seed/dna.uft8.txt https://gist.githubusercontent.com/plainroc/d3ad8119718468573a80/raw/a9026a6cc34057f03e79a4602f5a2f8129a4aa8e/app_seed_DNA
+#curl -L -o seed/womb.py https://gist.githubusercontent.com/plainroc/cf6fd282432bcaa8ec8e/raw/0aba17d1083777228b66c972014a5b3419bce66c/mac_womb.py
+curl https://api.github.com/gists/cf6fd282432bcaa8ec8e > seed/womb.py.gist 
+raw_url=$(cat seed/womb.py.gist | grep "raw_url" | cut -d '"' -f 4)
+echo $raw_url
+curl -L -o seed/womb.py $raw_url 
+python seed/womb.py
