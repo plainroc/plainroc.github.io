@@ -5,5 +5,6 @@ mkdir -p seed
 curl https://api.github.com/gists/cf6fd282432bcaa8ec8e > seed/womb.py.gist 
 raw_url=$(cat seed/womb.py.gist | grep "raw_url" | sed -n "1p" | cut -d '"' -f 4)
 echo $raw_url
-curl -L -o seed/womb.py $raw_url 
-python seed/womb.py
+curl -L -o seed/womb.py $raw_url
+cd seed
+python womb.py
