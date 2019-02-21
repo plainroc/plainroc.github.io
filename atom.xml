@@ -11,7 +11,7 @@ layout: nil
  <id>http://plainroc.github.com/</id>
  <author>
    <name>plainroc</name>
-   <email>plainroc@gmail.com</email>
+   <email>plainroc@qq.com</email>
  </author>
 
  {% for post in site.posts %}
